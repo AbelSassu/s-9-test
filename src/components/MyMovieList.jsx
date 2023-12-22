@@ -7,6 +7,7 @@ class MyMovieList extends React.Component {
         movies: [],
         isLoading: true,
         isError: false,
+        isHovered: false,
     };
 
     componentDidMount = async () => {
@@ -26,9 +27,16 @@ class MyMovieList extends React.Component {
             this.setState({ isLoading: false, isError: true });
         }
     };
+    handleMouseEnter = () => {
+        this.setState({ isHovered: true });
+    };
+
+    handleMouseLeave = () => {
+        this.setState({ isHovered: false });
+    };
 
     render() {
-        const { movies } = this.state;
+        const { movies, isHovered } = this.state;
         const chunkSize = 5;
 
         const chunks = movies.Search
@@ -44,10 +52,16 @@ class MyMovieList extends React.Component {
             <div>
                 <h4 className="my-4">{this.props.title}</h4>
                 {chunks.length > 0 && (
-                    <Carousel interval={60000} wrap={true} pause={false}>
+                    <Carousel
+                        interval={isHovered ? null : 6000}
+                        wrap={true}
+                        pause={false}
+                        onMouseEnter={this.handleMouseEnter}
+                        onMouseLeave={this.handleMouseLeave}
+                    >
                         {chunks.map((chunk, index) => (
                             <Carousel.Item key={index}>
-                                <Row className="flex-nowrap overflow-y-none">
+                                <Row className="flex-nowrap">
                                     {chunk.map((movie, movieIndex) => (
                                         <MySingleMovie
                                             key={movieIndex}

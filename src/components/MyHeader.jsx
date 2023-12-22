@@ -1,7 +1,8 @@
 import React from "react";
-import logo from "../logo.png"
+import logo from "../logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faBell, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faBell, faUser } from "@fortawesome/free-solid-svg-icons";
+import Search from "./Search";
 
 const MyHeader = () => {
     return (
@@ -58,17 +59,11 @@ const MyHeader = () => {
                             My List
                         </a>
                     </li>
-                </ul>         
-                    <div className="d-flex">
-                        <FontAwesomeIcon icon={faSearch} className="icons" />
-                        <div id="kids">KIDS</div>
-                        <FontAwesomeIcon icon={faBell} className="icons" />
-                        <FontAwesomeIcon icon={faUser} className="icons" />
-                    </div>
+                </ul>
+                <Search />
             </div>
         </nav>
     );
 };
 
 export default MyHeader;
-
