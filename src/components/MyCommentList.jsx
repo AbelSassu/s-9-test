@@ -2,7 +2,6 @@ import { Row, Col } from "react-bootstrap";
 import MySingleComment from "./MySingleComment";
 
 const MyCommentList = (props) => {
-    console.log(props.rec);
     return (
         <Row className="mt-4 mx-2">
             {props.comment.length === 0 ? (

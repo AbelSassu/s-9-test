@@ -30,6 +30,9 @@ footer {
   height: 450px !important;
   width: 300px!important;
 }
+.bottone{
+    height: 35px !important;
+}
 .footer-icon {
     font-size: 1.3em;
     margin-left: 1%;

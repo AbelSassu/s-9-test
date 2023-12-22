@@ -24,10 +24,11 @@ const MySingleComment = (props) => {
     };
 
     return (
-        <Col className="d-flex justify-content-between w-75 mb-2">
-            <p className="text-white">Recensione: {props.rec.comment}</p>
+        <Col className="d-flex justify-content-between mb-2">
+            <p className="text-white">{props.rec.comment}</p>
             <Button
-                className="bg-delete border-0"
+            className="bottone"
+                variant="danger"
                 onClick={() => deleteComment(props.rec._id)}
             >
                 🗑
