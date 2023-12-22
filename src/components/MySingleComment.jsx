@@ -1,4 +1,4 @@
-import { Col, Button } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 
 const MySingleComment = (props) => {
     const deleteComment = async (asin) => {
@@ -24,16 +24,18 @@ const MySingleComment = (props) => {
     };
 
     return (
-        <Col className="d-flex justify-content-between mb-2">
-            <p className="text-white">{props.rec.comment}</p>
-            <Button
-            className="bottone"
-                variant="danger"
-                onClick={() => deleteComment(props.rec._id)}
-            >
-                🗑
-            </Button>
-        </Col>
+        <Row>
+            <Col className="d-flex justify-content-between mb-2">
+                <p className="text-white">{props.rec.comment}</p>
+                <Button
+                className="bottone"
+                    variant="danger"
+                    onClick={() => deleteComment(props.rec._id)}
+                >
+                    🗑
+                </Button>
+            </Col>
+        </Row>
     );
 };
 

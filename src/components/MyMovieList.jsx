@@ -44,7 +44,7 @@ class MyMovieList extends React.Component {
             <div>
                 <h4 className="my-4">{this.props.title}</h4>
                 {chunks.length > 0 && (
-                    <Carousel interval={306000} wrap={true} pause={false}>
+                    <Carousel interval={60000} wrap={true} pause={false}>
                         {chunks.map((chunk, index) => (
                             <Carousel.Item key={index}>
                                 <Row className="flex-nowrap overflow-y-none">
