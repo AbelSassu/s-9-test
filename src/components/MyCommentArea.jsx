@@ -39,7 +39,6 @@ class MyCommentArea extends React.Component {
     };
 
     render() {
-        console.log(this.state.comments);
         return (
             <div>
                 {/*<MyAddComment asin={this.props.id} />*/}

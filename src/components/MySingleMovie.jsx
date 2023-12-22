@@ -8,13 +8,23 @@ class MySingleMovie extends React.Component {
 
     render() {
         return (
-            <Col className="immagini">
-                <div onClick={() => this.setState({ selected: !this.state.selected })}>
-                    <img src={this.props.movie.Poster} alt="immagine"/>
+            <Col>
+                <div
+                    onClick={() =>
+                        this.setState({ selected: !this.state.selected })
+                    }
+                >
+                    <img
+                        src={this.props.movie.Poster}
+                        className="immagini"
+                        alt="immagine"
+                    />
                 </div>
-                {this.state.selected && <MyCommentArea id={this.props.movie.imdbID} />}
+                {this.state.selected && (
+                    <MyCommentArea id={this.props.movie.imdbID} />
+                )}
             </Col>
-        )
+        );
     }
 }
 

@@ -42,7 +42,7 @@ class MyMovieList extends React.Component {
 
         return (
             <div>
-                <h4>{this.props.title}</h4>
+                <h4 className="my-4">{this.props.title}</h4>
                 {chunks.length > 0 && (
                     <Carousel interval={306000} wrap={true} pause={false}>
                         {chunks.map((chunk, index) => (
