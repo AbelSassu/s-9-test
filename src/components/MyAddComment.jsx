@@ -48,7 +48,7 @@ class MyAddComment extends React.Component {
             <div className="mb-3">
                 <Form onSubmit={this.sendComment}>
                     <Form.Group>
-                        <Form.Label>Commenta qua sotto!</Form.Label>
+                        <Form.Label className="text-light my-3">Commenta qua sotto!</Form.Label>
                         <Form.Control
                             type="text"
                             placeholder="Ti rode il culo? Scrivilo qua!"
@@ -64,7 +64,7 @@ class MyAddComment extends React.Component {
                         />
                     </Form.Group>
                     <Form.Group>
-                        <Form.Label>Voto da 1 a 5</Form.Label>
+                        <Form.Label className="text-light my-2">Voto da 1 a 5</Form.Label>
                         <Form.Control
                             as="select"
                             value={this.state.comment.rate}
