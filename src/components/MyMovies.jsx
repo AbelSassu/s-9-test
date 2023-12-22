@@ -3,9 +3,9 @@ import MyMovieLIst from "./MyMovieList"
 
 const MyMovies = () => {
     return (
-        <Container className="mx-5">
-            <Row>
-                <Col xs={12}>
+        <Container className="m-0">
+            <Row className="mmWidth">
+                <Col>
                     <MyMovieLIst
                         category="http://www.omdbapi.com/?apikey=a60c976&s=harry%20potter"
                         title="Harry Potter"

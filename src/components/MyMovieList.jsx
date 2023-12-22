@@ -1,5 +1,6 @@
 import React from "react";
-import { Row } from "react-bootstrap";
+import { Row, Carousel } from "react-bootstrap";
+import MySingleMovie from "./MySingleMovie";
 
 class MyMovieList extends React.Component {
     state = {
@@ -27,14 +28,37 @@ class MyMovieList extends React.Component {
     };
 
     render() {
+        const { movies } = this.state;
+        const chunkSize = 5;
+
+        const chunks = movies.Search
+            ? Array(Math.ceil(movies.Search.length / chunkSize))
+                  .fill()
+                  .map((_, index) => index * chunkSize)
+                  .map((begin, index) =>
+                      movies.Search.slice(begin, begin + chunkSize)
+                  )
+            : [];
+
         return (
             <div>
-                <h2 className="accadue">
-                    {this.props.title}
-                </h2>
-                <Row>
-
-                </Row>
+                <h4>{this.props.title}</h4>
+                {chunks.length > 0 && (
+                    <Carousel interval={306000} wrap={true} pause={false}>
+                        {chunks.map((chunk, index) => (
+                            <Carousel.Item key={index}>
+                                <Row className="flex-nowrap overflow-y-none">
+                                    {chunk.map((movie, movieIndex) => (
+                                        <MySingleMovie
+                                            key={movieIndex}
+                                            movie={movie}
+                                        />
+                                    ))}
+                                </Row>
+                            </Carousel.Item>
+                        ))}
+                    </Carousel>
+                )}
             </div>
         );
     }
