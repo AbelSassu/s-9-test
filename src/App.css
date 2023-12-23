@@ -1,5 +1,6 @@
 body {
     background-color: #221f1f;
+    padding: 0px;
 }
 
 h2,
@@ -18,7 +19,25 @@ footer {
 .navbar-nav {
     font-size: 0.9em;
 }
-
+.drop {
+  color: #838383;
+  border: none; 
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 50px ;
+  height: 50px;
+}
+.carousel-control-prev, .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  bottom: 100%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+}
+.carousel-control-next {
+  right: -24vh;
+}
 #kids {
     color: #f5f5f1;
     font-size: 0.8em;
@@ -42,6 +61,10 @@ footer {
 }
 .bottone {
     height: 35px !important;
+}
+.icons:hover, button:hover{
+    cursor: pointer;
+    color: white !important;
 }
 .search-container {
     display: flex;

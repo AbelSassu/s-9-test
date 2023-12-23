@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faBell, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { Form } from "react-bootstrap";
 
-const SearchComponent = () => {
+const Search = () => {
     const [isSearchVisible, setSearchVisible] = useState(false);
 
     const handleSearchClick = () => {
@@ -10,7 +11,7 @@ const SearchComponent = () => {
     };
 
     return (
-        <div className="d-inline-flex align-items-center">
+        <Form className="d-inline-flex align-items-center">
             <button
                 className="btn btn-outline-secondary text-white fill-white"
                 type="button"
@@ -26,21 +27,11 @@ const SearchComponent = () => {
                 placeholder="Cerca..."
                 id="searchInput"
             />
-        </div>
+        </Form>
     );
+
 };
 
-const Search = () => {
-    return (
-        <div className="d-flex align-items-center">
-            <SearchComponent />
-            <div id="kids" className="ms-3">
-                KIDS
-                <FontAwesomeIcon icon={faBell} className="icons ms-4" />
-                <FontAwesomeIcon icon={faUser} className="icons" />
-            </div>
-        </div>
-    );
-};
+
 
 export default Search;

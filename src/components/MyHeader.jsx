@@ -3,6 +3,7 @@ import logo from "../logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell, faUser } from "@fortawesome/free-solid-svg-icons";
 import Search from "./Search";
+import MyDropDown from "./MyDropDown";
 
 const MyHeader = () => {
     return (
@@ -60,7 +61,12 @@ const MyHeader = () => {
                         </a>
                     </li>
                 </ul>
-                <Search />
+                <div className="d-flex align-items-center">
+                    <Search />
+                    <p className="text-white mt-3 ms-2">KIDS</p>
+                    <FontAwesomeIcon icon={faBell} className="icons ms-4" />
+                    <MyDropDown />
+                </div>
             </div>
         </nav>
     );
