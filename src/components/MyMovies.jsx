@@ -1,6 +1,6 @@
 import {Col, Container, Row } from "react-bootstrap"
 import MyMovieLIst from "./MyMovieList"
-import Search from "./Search";
+
 
 const MyMovies = () => {
     return (

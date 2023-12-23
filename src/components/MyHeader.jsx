@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBell, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faBell } from "@fortawesome/free-solid-svg-icons";
 import Search from "./Search";
 import MyDropDown from "./MyDropDown";
 
