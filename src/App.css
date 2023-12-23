@@ -70,6 +70,32 @@ footer {
     display: flex;
     align-items: center;
 }
+.profile-page {
+  /* padding: 5% 20%; */
+  color: #fff;
+}
+
+.profile-page .btn {
+  letter-spacing: 0.05rem;
+}
+
+.profile-page .action-buttons button {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.profile-title {
+  font-size: 64px;
+}
+
+.edit-icon {
+  position: relative;
+  left: 10%;
+  top: -10%;
+  background: black;
+  padding: 10px;
+  border-radius: 50%;
+}
 .footer-icon {
     font-size: 1.3em;
     margin-left: 1%;

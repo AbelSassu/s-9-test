@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Dropdown } from "react-bootstrap";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+import MyProfile from "./MyProfile";
 
 const MyDropDown = () => {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -17,12 +18,7 @@ const MyDropDown = () => {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-                <Dropdown.Item href="./profile.html">
-                    <div className="d-flex align-items-center">
-                        
-                        Abel Sassu
-                    </div>
-                </Dropdown.Item>
+                <MyProfile/>
                 <Dropdown.Item >
                     Manage Profiles
                 </Dropdown.Item>
